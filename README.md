@@ -1,1 +1,1 @@
-# social_media_app
+# Social Media App using MERNG stack
