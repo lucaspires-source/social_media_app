@@ -4,7 +4,7 @@ const { model, Schema} = require('mongoose')
 const postSchema = new Schema({
     body:String,
     username:String,
-    createdAt:Date,
+    createdAt:String,
     comments:[
         {
             body:String,
@@ -19,7 +19,7 @@ const postSchema = new Schema({
         }
     ],
     user: {
-        tyoe:Schema.Types.ObjectId,
+        type:Schema.Types.ObjectId,
         ref:'users'
     }
 })
