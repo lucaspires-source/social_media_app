@@ -1,5 +1,6 @@
 const Post = require('../../models/Post')
 const {UserInputError} = require('apollo-server')
+const checkAuth = require('../../util/check-auth')
 
 module.exports = {
     Mutation : {
@@ -13,10 +14,10 @@ module.exports = {
                 })
             }
 
-            const post = Post.findById(postId)
+            const post = await Post.findById(postId)
 
             if(post){
-                post.comments.unshif({
+                post.comments.unshift({
                     body,
                     username,
                     createdAt: new Date().toISOString()
