@@ -8,11 +8,25 @@ type Post {
     body:String!
     username:String!
     createdAt:String!
+    comments: [Comment!]!
+    likes:[Like]!
 }
 type User {
     id:ID!
     email:String!
     token:String!
+    username:String!
+    createdAt:String!
+}
+type Comment {
+    id:ID!
+    body:String!
+    username:String!
+    createdAt:String!
+}
+
+type Like {
+    id:ID!
     username:String!
     createdAt:String!
 }
