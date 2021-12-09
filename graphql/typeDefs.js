@@ -10,6 +10,8 @@ type Post {
     createdAt:String!
     comments: [Comment!]!
     likes:[Like]!
+    likeCount: Int!
+    commentCount: Int!
 }
 type User {
     id:ID!
